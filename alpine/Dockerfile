@@ -1,8 +1,8 @@
-ARG ALPINE_VERSION=3.9
+ARG ALPINE_VERSION=3.10
 
 FROM alpine:$ALPINE_VERSION as builder
 
-ARG MYSQL_VERSION=8.0.17
+ARG MYSQL_VERSION=8.0.18
 
 RUN cd /tmp \
   && apk --no-cache add build-base cmake ncurses-dev openssl-dev \
