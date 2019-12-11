@@ -45,10 +45,6 @@ Debian
 ```Dockerfile
 FROM ruby:buster
 
-RUN apt-get update && apt-get install -y \
-  libncurses6 libssl \
-  && apt-get clean && rm -rf /var/lib/apt/lists/*
-
 # use libmysqlclient instead of libmariadb to build mysql2 gem
 COPY --from=sndbx/libmysqlclient:debian /usr/local/mysql /usr/local/mysql
 
